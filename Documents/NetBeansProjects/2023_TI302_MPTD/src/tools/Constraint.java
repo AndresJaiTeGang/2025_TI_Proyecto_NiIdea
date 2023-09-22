@@ -49,7 +49,32 @@ public class Constraint {
     public void setB1(float b1) {
         this.b1 = b1;
     }
-
+    
+    public Point2D getP1(){
+    Point2D p1 = new Point2D();
+    
+    if(a1 != 0.0f && a2 != 0.0f && b1 != 0.0f){
+        //CASO 1: p1 ( x1=0, ??) & P2 ( x1= X1MAX, ??)
+        p1.setX1(0);
+        p1.setX2(b1/a2);
+    }
+    return p1;
+}
+    public Point2D getP2(){
+    Point2D p2 = new Point2D();
+    
+    if(a1 != 0.0f && a2 != 0.0f && b1 != 0.0f){
+        //CASO 1: p1 ( x1=0, ??) & P2 ( x1= X1MAX, ??)
+        p2.setX1(Coordinate.XMAX);
+        p2.setX2((b1 -a1 * Coordinate.XMAX)/a2);
+    }
+    return p2;
+}
+    
+    public Point2D (float x1, float x2){
+    this.x1 = x1;
+    this.x2 = x2;
+}
     @Override
     public String toString() {
         return "Constraint{" + "a1=" + a1 + ", a2=" + a2 + ", b1=" + b1 + '}';
