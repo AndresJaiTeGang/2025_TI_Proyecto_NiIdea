@@ -71,10 +71,7 @@ public class Constraint {
     return p2;
 }
     
-    public Point2D (float x1, float x2){
-    this.x1 = x1;
-    this.x2 = x2;
-}
+
     @Override
     public String toString() {
         return "Constraint{" + "a1=" + a1 + ", a2=" + a2 + ", b1=" + b1 + '}';

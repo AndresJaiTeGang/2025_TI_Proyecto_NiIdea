@@ -1,6 +1,9 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * 2023 IESS-TICS MPTD
+ * Unidad 1. Programación Lineal
+ * Restricción lineal 2D
+ * By AM
+ * Fecha: 22/septiembre/2023
  */
 package tools;
 
