@@ -27,7 +27,7 @@ public class SimplexMethod {
     
     public void add(int i, float row[]){
         for(int k = 0; k < row.length; k++){
-            pl[i][k] = row[i];
+            pl[i][k] = row[k];
         }
     }
     
@@ -42,7 +42,7 @@ public class SimplexMethod {
                 val = pl[0][i];
                 break;
             }
-        }
+        }        
             if(index == -1) return index;
             
             // encontrar un valor negativo mas pequeño
