@@ -10,5 +10,16 @@ package transport;
  */
 public class MTransportTest {
     public static void main(String[] args) {
+        MTransport mt = new MTransport(2, 3);
+        
+        float []origin = {4, 5};
+        float []destiny = {1, 2, 6};
+        float [][]costs = {{1, 2, 3},{4, 5, 6}};
+        
+        mt.setDestiny(destiny);
+        mt.setOrigin(origin);
+        mt.setCosts(costs);
+        
+        mt.print();
     }
 }

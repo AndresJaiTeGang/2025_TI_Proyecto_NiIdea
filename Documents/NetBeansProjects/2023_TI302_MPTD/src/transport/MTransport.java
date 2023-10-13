@@ -22,6 +22,8 @@ public class MTransport {
     public MTransport(int originPoints, int destinyPoints){
         this.originPoints = originPoints;
         this.destinyPoints = destinyPoints;
+        
+        this.tableu = new float [originPoints][destinyPoints];
     }
     
     public void setOrigin(float origin[]){
@@ -79,26 +81,35 @@ public class MTransport {
     
     public void print(){
         //TODO
+        
+        System.out.println("TABLEU");
+        
         for (int i = 0; i < originPoints; i++) {
             for (int j = 0; j < destinyPoints; j++) {
-                System.out.println(tableu[i][j] + " ");
+                System.out.print(tableu[i][j] + "\t");
             }
             System.out.println("");
         }
         
+        System.out.println("COSTS");
+        
         for (int i = 0; i < originPoints; i++) {
             for (int j = 0; j < destinyPoints; j++) {
-                System.out.println(costs[i][j] + " ");
+                System.out.print(costs[i][j] + "\t");
             }
             System.out.println("");
         }
         
+        System.out.println("ORIGIN");
+        
         for (int i = 0; i < originPoints; i++) {
-            System.out.println(origin[i] + " ");
+            System.out.print(origin[i] + "\t");
         }
+        
+        System.out.println("DESTINY");
         
         for (int i = 0; i < destinyPoints; i++) {
-            System.out.println(destiny[i] + " ");
+            System.out.print(destiny[i] + "\t");
         }
     }
     
