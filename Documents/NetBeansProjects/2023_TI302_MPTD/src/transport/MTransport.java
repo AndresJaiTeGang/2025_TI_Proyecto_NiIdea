@@ -105,12 +105,14 @@ public class MTransport {
         for (int i = 0; i < originPoints; i++) {
             System.out.print(origin[i] + "\t");
         }
+        System.out.println("");
         
         System.out.println("DESTINY");
         
         for (int i = 0; i < destinyPoints; i++) {
             System.out.print(destiny[i] + "\t");
         }
+        System.out.println("");
     }
     
 }
