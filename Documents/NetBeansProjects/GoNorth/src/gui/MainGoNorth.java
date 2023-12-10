@@ -26,18 +26,17 @@ public class MainGoNorth extends javax.swing.JFrame {
 
         bg = new javax.swing.JPanel();
         ProgramacionLineal = new javax.swing.JLabel();
-        MetodoDeTransporte = new javax.swing.JLabel();
+        MetodoTransporte = new javax.swing.JLabel();
         logoTecNM = new javax.swing.JLabel();
         lbASYSC = new javax.swing.JLabel();
         bgLogo = new javax.swing.JLabel();
         lblTema2 = new javax.swing.JLabel();
         lblTema1 = new javax.swing.JLabel();
         lblTema3 = new javax.swing.JLabel();
-        Planeacion = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         lblFoot1 = new javax.swing.JLabel();
         lblFoot = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        TransformFourier1 = new javax.swing.JLabel();
+        Planeacion = new javax.swing.JLabel();
         lblTema4 = new javax.swing.JLabel();
         Inventarios = new javax.swing.JLabel();
         LineaEspera = new javax.swing.JLabel();
@@ -45,13 +44,13 @@ public class MainGoNorth extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        bg.setBackground(new java.awt.Color(255, 255, 255));
+        bg.setBackground(new java.awt.Color(51, 51, 51));
         bg.setForeground(new java.awt.Color(204, 204, 204));
         bg.setPreferredSize(new java.awt.Dimension(800, 500));
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ProgramacionLineal.setBackground(new java.awt.Color(255, 255, 255));
-        ProgramacionLineal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo_1.png"))); // NOI18N
+        ProgramacionLineal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ProgLin.png"))); // NOI18N
         ProgramacionLineal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ProgramacionLineal.setOpaque(true);
         ProgramacionLineal.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -67,49 +66,67 @@ public class MainGoNorth extends javax.swing.JFrame {
         });
         bg.add(ProgramacionLineal, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 100, 130, 90));
 
-        MetodoDeTransporte.setBackground(new java.awt.Color(255, 255, 255));
-        MetodoDeTransporte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.png"))); // NOI18N
-        MetodoDeTransporte.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        MetodoDeTransporte.setOpaque(true);
-        MetodoDeTransporte.addMouseListener(new java.awt.event.MouseAdapter() {
+        MetodoTransporte.setBackground(new java.awt.Color(255, 255, 255));
+        MetodoTransporte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MetTransp.png"))); // NOI18N
+        MetodoTransporte.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MetodoTransporte.setOpaque(true);
+        MetodoTransporte.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                MetodoDeTransporteMouseClicked(evt);
+                MetodoTransporteMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                MetodoDeTransporteMouseEntered(evt);
+                MetodoTransporteMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                MetodoDeTransporteMouseExited(evt);
+                MetodoTransporteMouseExited(evt);
             }
         });
-        bg.add(MetodoDeTransporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 100, 120, 90));
+        bg.add(MetodoTransporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 100, 120, 90));
 
+        logoTecNM.setBackground(new java.awt.Color(0, 0, 0));
+        logoTecNM.setForeground(new java.awt.Color(0, 0, 0));
         logoTecNM.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo itess-blanco new-small.png"))); // NOI18N
-        bg.add(logoTecNM, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, 210, 80));
+        bg.add(logoTecNM, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 390, 220, 80));
 
-        lbASYSC.setFont(new java.awt.Font("Roboto Black", 0, 24)); // NOI18N
-        lbASYSC.setForeground(new java.awt.Color(0, 0, 0));
+        lbASYSC.setBackground(new java.awt.Color(255, 255, 255));
+        lbASYSC.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
+        lbASYSC.setForeground(new java.awt.Color(51, 255, 255));
         lbASYSC.setText("Portafolio Digital 2023 ITESS-TICS MPTD GoNorth");
         lbASYSC.setToolTipText("");
-        bg.add(lbASYSC, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 560, 40));
+        bg.add(lbASYSC, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 620, 30));
 
-        bgLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fondo6.jpg"))); // NOI18N
-        bg.add(bgLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 364, 500));
+        bgLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/GoNorth logo.png"))); // NOI18N
+        bgLogo.setDoubleBuffered(true);
+        bgLogo.setPreferredSize(new java.awt.Dimension(473, 452));
+        bg.add(bgLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 480));
 
-        lblTema2.setForeground(new java.awt.Color(0, 0, 0));
+        lblTema2.setForeground(new java.awt.Color(255, 255, 255));
         lblTema2.setText("Tema2. M Transporte");
-        bg.add(lblTema2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 190, -1, -1));
+        bg.add(lblTema2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 190, 130, -1));
 
-        lblTema1.setForeground(new java.awt.Color(0, 0, 0));
+        lblTema1.setForeground(new java.awt.Color(255, 255, 255));
         lblTema1.setText("Tema1. Prog lineal");
-        bg.add(lblTema1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 190, 120, -1));
+        bg.add(lblTema1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 190, 140, -1));
 
-        lblTema3.setForeground(new java.awt.Color(0, 0, 0));
+        lblTema3.setForeground(new java.awt.Color(255, 255, 255));
         lblTema3.setText("Tema3. Planeación");
-        bg.add(lblTema3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 310, -1, -1));
+        bg.add(lblTema3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 310, 120, -1));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Programador Andres");
+        bg.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 30, -1, -1));
+
+        lblFoot1.setForeground(new java.awt.Color(51, 255, 255));
+        lblFoot1.setText("ITESS-TICS-2023 Ago-Dic");
+        bg.add(lblFoot1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 450, -1, -1));
+
+        lblFoot.setForeground(new java.awt.Color(255, 51, 0));
+        lblFoot.setText("Francisco Javier Montecillo Puente");
+        bg.add(lblFoot, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 470, -1, -1));
 
         Planeacion.setBackground(new java.awt.Color(255, 255, 255));
-        Planeacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/tema3_FurierTransform_logo.png"))); // NOI18N
+        Planeacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Plan.png"))); // NOI18N
         Planeacion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Planeacion.setOpaque(true);
         Planeacion.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -123,43 +140,14 @@ public class MainGoNorth extends javax.swing.JFrame {
                 PlaneacionMouseExited(evt);
             }
         });
-        bg.add(Planeacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, 110, 90));
+        bg.add(Planeacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 220, 130, 90));
 
-        lblFoot1.setForeground(new java.awt.Color(255, 51, 0));
-        lblFoot1.setText("ITESS-TICS-2023 Ago-Dic");
-        bg.add(lblFoot1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 450, -1, -1));
-
-        lblFoot.setForeground(new java.awt.Color(255, 51, 0));
-        lblFoot.setText("Francisco Javier Montecillo Puente");
-        bg.add(lblFoot, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 470, -1, -1));
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel1.setText("Programador Andres.com");
-        bg.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 50, -1, -1));
-
-        TransformFourier1.setBackground(new java.awt.Color(255, 255, 255));
-        TransformFourier1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/tema3_FurierTransform_logo.png"))); // NOI18N
-        TransformFourier1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        TransformFourier1.setOpaque(true);
-        TransformFourier1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                TransformFourier1MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                TransformFourier1MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                TransformFourier1MouseExited(evt);
-            }
-        });
-        bg.add(TransformFourier1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, 110, 90));
-
-        lblTema4.setForeground(new java.awt.Color(0, 0, 0));
+        lblTema4.setForeground(new java.awt.Color(255, 255, 255));
         lblTema4.setText("Tema4. Inventarios");
-        bg.add(lblTema4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 310, -1, -1));
+        bg.add(lblTema4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 310, 120, -1));
 
         Inventarios.setBackground(new java.awt.Color(255, 255, 255));
-        Inventarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/tema3_FurierTransform_logo.png"))); // NOI18N
+        Inventarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/inven.png"))); // NOI18N
         Inventarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Inventarios.setOpaque(true);
         Inventarios.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -173,10 +161,10 @@ public class MainGoNorth extends javax.swing.JFrame {
                 InventariosMouseExited(evt);
             }
         });
-        bg.add(Inventarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 220, 110, 90));
+        bg.add(Inventarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 220, 120, 90));
 
         LineaEspera.setBackground(new java.awt.Color(255, 255, 255));
-        LineaEspera.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/tema3_FurierTransform_logo.png"))); // NOI18N
+        LineaEspera.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/lineaEspera_1.png"))); // NOI18N
         LineaEspera.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LineaEspera.setOpaque(true);
         LineaEspera.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -190,11 +178,11 @@ public class MainGoNorth extends javax.swing.JFrame {
                 LineaEsperaMouseExited(evt);
             }
         });
-        bg.add(LineaEspera, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 330, 110, 90));
+        bg.add(LineaEspera, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 330, 130, 90));
 
-        lblTema5.setForeground(new java.awt.Color(0, 0, 0));
+        lblTema5.setForeground(new java.awt.Color(255, 255, 255));
         lblTema5.setText("Tema5. Lin Espera");
-        bg.add(lblTema5, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 420, -1, -1));
+        bg.add(lblTema5, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 420, 120, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -207,7 +195,7 @@ public class MainGoNorth extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(bg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(bg, javax.swing.GroupLayout.DEFAULT_SIZE, 486, Short.MAX_VALUE)
         );
 
         setBounds(0, 0, 820, 508);
@@ -221,63 +209,36 @@ public class MainGoNorth extends javax.swing.JFrame {
         ProgramacionLineal.setBackground(Color.white);
     }//GEN-LAST:event_ProgramacionLinealMouseExited
 
-    private void MetodoDeTransporteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MetodoDeTransporteMouseEntered
-        MetodoDeTransporte.setBackground(Color.yellow);
-    }//GEN-LAST:event_MetodoDeTransporteMouseEntered
-
-    private void MetodoDeTransporteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MetodoDeTransporteMouseExited
-        MetodoDeTransporte.setBackground(Color.white);
-    }//GEN-LAST:event_MetodoDeTransporteMouseExited
-
     private void ProgramacionLinealMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProgramacionLinealMouseClicked
         // TODO add your handling code here:
-        main.mainASYS.setVisible(false);
+        main.mainGoNorth.setVisible(false);
         
-        main.introduction = new Introduction(this.main);
-        main.introduction.setVisible(true);        
+        main.ProgramacionLineal = new ProgramacionLineal(this.main);
+        main.ProgramacionLineal.setVisible(true);        
     }//GEN-LAST:event_ProgramacionLinealMouseClicked
+
+    private void PlaneacionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PlaneacionMouseClicked
+        // TODO add your handling code here:
+        main.mainGoNorth.setVisible(false);
+        
+        main.Planeacion = new Planeacion(this.main);
+        main.Planeacion.setVisible(true);
+    }//GEN-LAST:event_PlaneacionMouseClicked
 
     private void PlaneacionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PlaneacionMouseEntered
         // TODO add your handling code here:
-        Planeacion.setBackground(Color.yellow);
     }//GEN-LAST:event_PlaneacionMouseEntered
 
     private void PlaneacionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PlaneacionMouseExited
         // TODO add your handling code here:
-        Planeacion.setBackground(new Color(255,255,255));
     }//GEN-LAST:event_PlaneacionMouseExited
-
-    private void MetodoDeTransporteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MetodoDeTransporteMouseClicked
-        // TODO add your handling code here:
-        main.mainASYS.setVisible(false);
-        
-        main.fourierSeries = new FourierSeries(this.main);
-        main.fourierSeries.setVisible(true); 
-    }//GEN-LAST:event_MetodoDeTransporteMouseClicked
-
-    private void PlaneacionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PlaneacionMouseClicked
-        // TODO add your handling code here:
-        main.mainASYS.setVisible(false);
-        
-        main.fourierTransform = new FourierTransform(this.main);
-        main.fourierTransform.setVisible(true);
-    }//GEN-LAST:event_PlaneacionMouseClicked
-
-    private void TransformFourier1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TransformFourier1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TransformFourier1MouseClicked
-
-    private void TransformFourier1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TransformFourier1MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TransformFourier1MouseEntered
-
-    private void TransformFourier1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TransformFourier1MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TransformFourier1MouseExited
 
     private void InventariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InventariosMouseClicked
         // TODO add your handling code here:
+        main.mainGoNorth.setVisible(false);
         
+        main.Inventarios = new Inventarios(this.main);
+        main.Inventarios.setVisible(true);
     }//GEN-LAST:event_InventariosMouseClicked
 
     private void InventariosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InventariosMouseEntered
@@ -292,6 +253,10 @@ public class MainGoNorth extends javax.swing.JFrame {
 
     private void LineaEsperaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LineaEsperaMouseClicked
         // TODO add your handling code here:
+        main.mainGoNorth.setVisible(false);
+        
+        main.LineaEspera = new LineaEspera(this.main);
+        main.LineaEspera.setVisible(true); 
     }//GEN-LAST:event_LineaEsperaMouseClicked
 
     private void LineaEsperaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LineaEsperaMouseEntered
@@ -303,6 +268,22 @@ public class MainGoNorth extends javax.swing.JFrame {
         // TODO add your handling code here:
         LineaEspera.setBackground(Color.white);
     }//GEN-LAST:event_LineaEsperaMouseExited
+
+    private void MetodoTransporteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MetodoTransporteMouseExited
+        MetodoTransporte.setBackground(Color.white);
+    }//GEN-LAST:event_MetodoTransporteMouseExited
+
+    private void MetodoTransporteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MetodoTransporteMouseEntered
+        MetodoTransporte.setBackground(Color.yellow);
+    }//GEN-LAST:event_MetodoTransporteMouseEntered
+
+    private void MetodoTransporteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MetodoTransporteMouseClicked
+        // TODO add your handling code here:
+        main.mainGoNorth.setVisible(false);
+
+        main.MetodoTransporte = new MetodoTransporte(this.main);
+        main.MetodoTransporte.setVisible(true);
+    }//GEN-LAST:event_MetodoTransporteMouseClicked
 
     /**
      * @param args the command line arguments
@@ -345,10 +326,9 @@ public class MainGoNorth extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Inventarios;
     private javax.swing.JLabel LineaEspera;
-    private javax.swing.JLabel MetodoDeTransporte;
+    private javax.swing.JLabel MetodoTransporte;
     private javax.swing.JLabel Planeacion;
     private javax.swing.JLabel ProgramacionLineal;
-    private javax.swing.JLabel TransformFourier1;
     private javax.swing.JPanel bg;
     private javax.swing.JLabel bgLogo;
     private javax.swing.JLabel jLabel1;

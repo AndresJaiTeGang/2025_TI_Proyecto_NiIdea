@@ -7,12 +7,12 @@ import app.Main;
  *
  * @author xeon
  */
-public class LineaDeEspera extends javax.swing.JFrame {
+public class MetodoTransporte extends javax.swing.JFrame {
     Main main;
     /**
      * Creates new form ComplexNumberASYS
      */
-    public LineaDeEspera(Main main) {
+    public MetodoTransporte(Main main) {
         initComponents();
         
         this.main = main;
@@ -30,22 +30,24 @@ public class LineaDeEspera extends javax.swing.JFrame {
         pnlComplexNumbers = new javax.swing.JPanel();
         lblHOME = new javax.swing.JLabel();
         lblComplexNumbers = new javax.swing.JLabel();
-        lblLogoComplexNumbers = new javax.swing.JLabel();
         lblTema1 = new javax.swing.JLabel();
-        lblIndicacion = new javax.swing.JLabel();
         lblFoot = new javax.swing.JLabel();
         lblFoot1 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        lblIndicacion1 = new javax.swing.JLabel();
+        solution = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         pnlComplexNumbers.setBackground(new java.awt.Color(0, 0, 0));
+        pnlComplexNumbers.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         pnlComplexNumbers.setPreferredSize(new java.awt.Dimension(800, 500));
         pnlComplexNumbers.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblHOME.setBackground(new java.awt.Color(0, 0, 0));
-        lblHOME.setFont(new java.awt.Font("Roboto Medium", 0, 24)); // NOI18N
-        lblHOME.setForeground(new java.awt.Color(255, 78, 0));
+        lblHOME.setBackground(new java.awt.Color(0, 255, 204));
+        lblHOME.setFont(new java.awt.Font("Roboto Medium", 1, 24)); // NOI18N
+        lblHOME.setForeground(new java.awt.Color(0, 0, 0));
         lblHOME.setText("Inicio");
         lblHOME.setOpaque(true);
         lblHOME.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -61,45 +63,40 @@ public class LineaDeEspera extends javax.swing.JFrame {
         });
         pnlComplexNumbers.add(lblHOME, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 20, 70, 50));
 
-        lblComplexNumbers.setFont(new java.awt.Font("Roboto Black", 0, 36)); // NOI18N
-        lblComplexNumbers.setForeground(new java.awt.Color(255, 78, 0));
-        lblComplexNumbers.setText("Lineas de Espera");
+        lblComplexNumbers.setBackground(new java.awt.Color(255, 0, 204));
+        lblComplexNumbers.setFont(new java.awt.Font("Roboto Black", 1, 36)); // NOI18N
+        lblComplexNumbers.setForeground(new java.awt.Color(51, 255, 204));
+        lblComplexNumbers.setText("Método de Transporte");
         pnlComplexNumbers.add(lblComplexNumbers, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 430, 50));
-
-        lblLogoComplexNumbers.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/lineaEspera.png"))); // NOI18N
-        lblLogoComplexNumbers.setText("jLabel1");
-        pnlComplexNumbers.add(lblLogoComplexNumbers, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 100, 100));
 
         lblTema1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblTema1.setForeground(new java.awt.Color(255, 255, 255));
-        lblTema1.setText("Optimiza la operación de los servicios  aplicando la Teoría de líneas de espera. ");
-        pnlComplexNumbers.add(lblTema1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 80, 560, 30));
+        lblTema1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblTema1.setText("Utiliza modelos matemáticos para la solución de problemas que contemplen la asignación y transporte.");
+        pnlComplexNumbers.add(lblTema1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, 720, 30));
 
-        lblIndicacion.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
-        lblIndicacion.setForeground(new java.awt.Color(255, 255, 255));
-        lblIndicacion.setText("Indicaciones: introduzca dos números complejos para calular las operaciones indicadas.");
-        pnlComplexNumbers.add(lblIndicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 550, 20));
-
-        lblFoot.setForeground(new java.awt.Color(255, 51, 0));
-        lblFoot.setText("Francisco Javier Montecillo Puente");
+        lblFoot.setForeground(new java.awt.Color(0, 255, 204));
+        lblFoot.setText("Andres Mendoza");
         pnlComplexNumbers.add(lblFoot, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 470, -1, -1));
 
-        lblFoot1.setForeground(new java.awt.Color(255, 51, 0));
+        lblFoot1.setForeground(new java.awt.Color(0, 255, 204));
         lblFoot1.setText("ITESS-TICS-2023 Ago-Dic");
-        pnlComplexNumbers.add(lblFoot1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 450, -1, -1));
+        pnlComplexNumbers.add(lblFoot1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 450, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 250, Short.MAX_VALUE)
-        );
+        lblIndicacion1.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
+        lblIndicacion1.setForeground(new java.awt.Color(255, 255, 255));
+        lblIndicacion1.setText("Indicaciones: Se realiza la asignación de costos con le método de la esquina noroeste considerando costos de envío");
+        pnlComplexNumbers.add(lblIndicacion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 730, 20));
 
-        pnlComplexNumbers.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, 500, 250));
+        solution.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/3.probMetod.jpg"))); // NOI18N
+        pnlComplexNumbers.add(solution, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 490, 290));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MetTransp_1.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        pnlComplexNumbers.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 90, 90));
+
+        jLabel2.setText("jLabel2");
+        pnlComplexNumbers.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, -4, 100, 190));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -127,10 +124,10 @@ public class LineaDeEspera extends javax.swing.JFrame {
 
     private void lblHOMEMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblHOMEMouseClicked
         // TODO add your handling code here:
-        main.introduction.setVisible(false);
-        main.introduction = null;
+        main.MetodoTransporte.setVisible(false);
+        main.MetodoTransporte = null;
 
-        main.mainASYS.setVisible(true);
+        main.mainGoNorth.setVisible(true);
     }//GEN-LAST:event_lblHOMEMouseClicked
 
     /**
@@ -150,14 +147,70 @@ public class LineaDeEspera extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LineaDeEspera.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MetodoTransporte.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LineaDeEspera.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MetodoTransporte.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LineaDeEspera.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MetodoTransporte.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LineaDeEspera.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MetodoTransporte.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -176,14 +229,15 @@ public class LineaDeEspera extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblComplexNumbers;
     private javax.swing.JLabel lblFoot;
     private javax.swing.JLabel lblFoot1;
     private javax.swing.JLabel lblHOME;
-    private javax.swing.JLabel lblIndicacion;
-    private javax.swing.JLabel lblLogoComplexNumbers;
+    private javax.swing.JLabel lblIndicacion1;
     private javax.swing.JLabel lblTema1;
     private javax.swing.JPanel pnlComplexNumbers;
+    private javax.swing.JLabel solution;
     // End of variables declaration//GEN-END:variables
 }

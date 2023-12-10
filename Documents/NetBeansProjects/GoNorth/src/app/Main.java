@@ -5,8 +5,8 @@
 package app;
 
 import gui.MainGoNorth;
-import gui.Introduction;
-import gui.FourierSeries;
+import gui.ProgramacionLineal;
+import gui.Inventarios;
 import javax.swing.JFrame;
 
 /**
@@ -15,14 +15,15 @@ import javax.swing.JFrame;
  */
 public class Main {
     
-    public JFrame mainASYS;
-    public JFrame introduction;
-    public JFrame fourierSeries;
-    public JFrame fourierTransform;
-    public JFrame discreteSystem;
+    public JFrame mainGoNorth;
+    public JFrame ProgramacionLineal;
+    public JFrame MetodoTransporte;
+    public JFrame Planeacion;
+    public JFrame Inventarios;
+    public JFrame LineaEspera;
     
     public Main() {
-        mainASYS = new MainGoNorth(this);
+        mainGoNorth = new MainGoNorth(this);
         //complexNumbersASYS = new ComplexNumbersASYS(this);
         //realGraphASYS = new RealGraphASYS(this);
         
@@ -31,7 +32,7 @@ public class Main {
     public void run() {
         java.awt.EventQueue.invokeLater(new Runnable() {
                 public void run() {
-                    mainASYS.setVisible(true);
+                    mainGoNorth.setVisible(true);
                 }
             });
     }
