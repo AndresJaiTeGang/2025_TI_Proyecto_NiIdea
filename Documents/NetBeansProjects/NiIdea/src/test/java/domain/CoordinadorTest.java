@@ -38,7 +38,7 @@ public class CoordinadorTest {
      */
     @Test
     public void testSetters() {
-        Coordinador coordinador = new Coordinador(0, "");
+        Coordinador coordinador = new Coordinador(3, "");
 
         coordinador.setId(2);
         coordinador.setNombre("Joaquin");

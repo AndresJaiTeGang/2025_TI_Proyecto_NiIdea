@@ -1,19 +1,5 @@
 package domain;
 
-/**
- * Representa a un usuario dentro del sistema del proyecto NiIdea.
- *
- * Proyecto: NiIdea
- * Materia: Taller de Investigación 1
- * Periodo: Agosto-Diciembre 2025
- * Docente: FJMP
- * Programador: Andres Mendoza
- * Fecha: 02/10/2025
- *
- * @author Andres Mendoza
- * @version 1.0
- * @since 2025-10-16
- */
 abstract class Usuario {
     private String nombre;
     private String ndu;
@@ -23,6 +9,16 @@ abstract class Usuario {
         this.nombre = nombre;
         this.ndu = ndu;
         this.clave = clave;
+    }
+
+    /**
+     * Constructor simplificado para permitir crear objetos solo con el nombre.
+     * Útil para clases derivadas que no requieren todos los datos al inicio.
+     */
+    public Usuario(String nombre) {
+        this.nombre = nombre;
+        this.ndu = "";
+        this.clave = "";
     }
 
     public String getNombre() {
@@ -48,5 +44,4 @@ abstract class Usuario {
     public void setClave(String clave) {
         this.clave = clave;
     }
-    
 }

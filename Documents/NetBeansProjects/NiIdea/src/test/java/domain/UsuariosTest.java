@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Pruebas unitarias para la clase {@link Usuarios}.
+ * Pruebas unitarias para la clase {@link Usuario}.
  *
  * Proyecto: NiIdea
  * Materia: Taller de Investigación 1
@@ -14,23 +14,34 @@ import static org.junit.jupiter.api.Assertions.*;
  * Fecha: 02/10/2025
  *
  * Esta clase verifica el correcto funcionamiento del constructor,
- * así como los métodos getter y setter de la clase Usuarios.
+ * así como los métodos getter y setter de la clase Usuario.
  *
- * @author Andres Mendoza
- * @version 1.0
+ * @author Andres
+ * @version 1.1
  * @since 2025-10-02
  */
 public class UsuariosTest {
+
+    /**
+     * Clase auxiliar concreta que extiende Usuario
+     * para poder realizar pruebas unitarias sobre sus métodos.
+     */
+    private static class UsuarioConcreto extends Usuario {
+        public UsuarioConcreto(String nombre, String ndu, String clave) {
+            super(nombre, ndu, clave);
+        }
+    }
 
     /**
      * Verifica que el constructor y los métodos getter funcionen correctamente.
      */
     @Test
     public void testConstructorYGetters() {
-        Usuarios usuario = new Usuarios(1, "Alumno");
+        Usuario usuario = new UsuarioConcreto("Andres", "amendoza", "1234");
 
-        assertEquals(1, usuario.getId());
-        assertEquals("Alumno", usuario.getNombre());
+        assertEquals("Andres", usuario.getNombre());
+        assertEquals("amendoza", usuario.getNdu());
+        assertEquals("1234", usuario.getClave());
     }
 
     /**
@@ -38,12 +49,14 @@ public class UsuariosTest {
      */
     @Test
     public void testSetters() {
-        Usuarios usuario = new Usuarios(0, "");
+        Usuario usuario = new UsuarioConcreto("", "", "");
 
-        usuario.setId(2);
-        usuario.setNombre("Profesor");
+        usuario.setNombre("Juan Pérez");
+        usuario.setNdu("jperez");
+        usuario.setClave("abcd");
 
-        assertEquals(2, usuario.getId());
-        assertEquals("Profesor", usuario.getNombre());
+        assertEquals("Juan Pérez", usuario.getNombre());
+        assertEquals("jperez", usuario.getNdu());
+        assertEquals("abcd", usuario.getClave());
     }
 }
